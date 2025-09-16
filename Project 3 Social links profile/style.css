@@ -84,6 +84,9 @@
     font-size: 0.8rem;
     color: hsla(0, 0%, 100%, 0.700);
     padding-top: 1rem;
+    > a {
+        text-decoration: none;
+    }
 }
 
 /* mouse on hover event */
