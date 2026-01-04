@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Social links profile</title>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    :root {
+      --yellow: hsl(75, 94%, 57%);
+      --white: hsl(0, 0%, 100%);
+      --Grey700: hsl(0, 0%, 20%);
+      --Grey800: hsl(0, 0%, 12%);
+      --Grey900: hsl(0, 0%, 8%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 100vh;
+      background-color: var(--Grey900);
+      color: var(--white);
+      font-family: "Inter", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 300px;
+      padding: 30px;
+      background-color: var(--Grey800);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .card img {
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .profile {
+      margin: 25px 0;
+
+      h2 {
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      p {
+        color: var(--yellow);
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    .role {
+      color: var(--white);
+      opacity: 70%;
+      font-size: 14px;
+      margin: 25px 0;
+      font-weight: 400;
+    }
+
+    .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .social-link {
+      background-color: var(--Grey700);
+      padding: 15px 0;
+      border-radius: 10px;
+      color: var(--white);
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .social-link:hover {
+      background-color: var(--yellow);
+      color: var(--Grey800);
+    }
+
+    .attribution {
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media screen and (max-width:425px) {
+      .card {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <img src="./images/avatar.jpg " alt="Avatar image">
+
+      <div class="profile">
+        <h2>Satya Prabhu</h2>
+        <p>Bengaluru, India</p>
+      </div>
+
+      <div class="role">"Front-end developer and avid reader"</div>
+
+      <div class="socials">
+        <a class="social-link" target="_blank" href="https://github.com/Satya-Prabhu">GitHub</a>
+        <a class="social-link" target="_blank" href="https://www.linkedin.com/in/satyaprabhub">LinkedIn</a>
+        <a class="social-link" target="_blank" href="https://x.com/SatyaPrabhuB">Twitter</a>
+        <a class="social-link" target="_blank" href="https://www.instagram.com/satya_prabhu__143/">Instagram</a>
+      </div>
+
+    </div>
+
+    <div class="attribution">
+      Made with ❤️ by <a href="https://github.com/Satya-Prabhu" target="_blank">Satya Prabhu</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
