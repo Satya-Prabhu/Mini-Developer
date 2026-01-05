@@ -137,7 +137,7 @@ div span {
     }
     
     .card {
-        width: 100%;
+        width: 100vw;
         border-radius: 0;
         padding: 30px;
         
@@ -153,4 +153,5 @@ div span {
     .recipe .main-heading {
         font-size: 36px;
     }
+
 }
