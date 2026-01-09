@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --bg-dark: rgba(0, 0, 0, 0.95);
+  --bg: #10050490;
+  --bg-light: #282A3A;
+  --text: #fdf7f7;
+  --text-muted: hsl(71 35% 58%);
+  --highlight: hsl(65 100% 9%);
+  --border: #eae9fc;
+  --border-muted: #eae9fc50;
+  --image-ratio: 16/9;
+  /* --primary: hsl(65 100% 26%);
+  --secondary: hsl(260 100% 84%);
+  --danger: hsl(7 100% 66%);
+  --warning: hsl(53 100% 21%);
+  --success: hsl(162 100% 22%);
+  --info: hsl(217 100% 70%); */
+}
+
+/* body.light {
+--bg-dark: hsl(71 69% 78%);
+--bg: hsl(71 91% 83%);
+--bg-light: hsl(71 100% 88%);
+--text: hsl(64 100% 1%);
+--text-muted: hsl(65 100% 5%);
+--highlight: hsl(68 100% 71%);
+--border: hsl(65 100% 14%);
+--border-muted: hsl(65 100% 21%);
+--primary: hsl(65 100% 5%);
+--secondary: hsl(268 77% 36%);
+--danger: hsl(4 99% 37%);
+--warning: hsl(50 100% 12%);
+--success: hsl(159 100% 9%);
+--info: hsl(215 95% 42%);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background / Conatiner */
+.container {
+  background-color: var(--bg-dark);
+  padding: 10vh 0;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.grid {
+  margin: 0 15vw;
+  display: grid;
+  gap: 40px 100px;
+}
+
+/* Responsive columns: 1 (default), 2 from 768px, 3 from 1024px */
+@media (min-width: 768px){
+  .grid { grid-template-columns: repeat(2, minmax(0,1fr)); margin: 0 10vw;}
+}
+@media (min-width: 1024px){
+  .grid { grid-template-columns: repeat(3, minmax(0,1fr)); margin: 0 5vw; }
+}
+
+/* Entire Card / Project Style & Animations */
+.card {
+  background-color: var(--bg);
+  border: 0.1px solid var(--border-muted);
+  border-radius: 10px;
+  transition: all 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid var(--border);
+  transform: translateY(-3px);
+  
+  img {
+    transform: scale(1.05);
+  }
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* Project Demo Image Style */
+.project-image {
+  aspect-ratio: var(--image-ratio);
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    aspect-ratio: var(--image-ratio);
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.5s;
+  }
+}
+
+/* Project Information Area */
+.project-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  color: var(--text);
+  
+  span {
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+}
+
+/* Project Name / Title */
+.project-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Tech Stack Used */
+.project-stack {
+  display: flex;
+  gap: 0.5rem;
+  
+  span {
+    font-size: 12px;
+    padding: 2px 8px;
+    background-color: var(--bg-light);
+  }
+}
+
+/* Github code & Live preview */
+.project-link {
+  display: flex;
+  gap: 0.5rem;
+  
+  span {
+    height: 32px;
+    width: 85px;
+    font-size: 14px;
+    padding: 0 14px;
+    border: 1px solid var(--border-muted);
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* button hover */
+  span:hover {
+    background-color: var(--bg-light);
+  }
+  
+  span a {
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  span i {
+    font-size: 16px;
+  }
+  
+  span:nth-child(2) i {
+    -webkit-text-stroke: 0.2px;
+  }
+}
