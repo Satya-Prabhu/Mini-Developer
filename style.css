@@ -54,12 +54,15 @@
   gap: 40px 100px;
 }
 
-/* Responsive columns: 1 (default), 2 from 768px, 3 from 1024px */
+/* Responsive columns: 1 (default), 2 from 768px, 3 from 1024px, 4 from 1440px */
 @media (min-width: 768px){
   .grid { grid-template-columns: repeat(2, minmax(0,1fr)); margin: 0 10vw;}
 }
 @media (min-width: 1024px){
   .grid { grid-template-columns: repeat(3, minmax(0,1fr)); margin: 0 5vw; }
+}
+@media (min-width: 1440px){
+  .grid { grid-template-columns: repeat(4, minmax(0,1fr)); margin: 0 5vw; }
 }
 
 /* Entire Card / Project Style & Animations */
@@ -170,4 +173,5 @@
   span:nth-child(2) i {
     -webkit-text-stroke: 0.2px;
   }
+
 }
