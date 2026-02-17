@@ -1,4 +1,6 @@
 @media screen and (max-width:424px) {
+    h2 { letter-spacing: -2px; }
+    
     .get-started {
         flex-direction: column;
         align-items: flex-start;
@@ -9,8 +11,10 @@
         align-items: center;
     } 
     
-    .pfl .content .left {
-        > * { margin-top: 14px; }
+    .pfl-left {
+        height: 380px;
+        
+        h3 { margin: 0; }
         
         form { 
             grid-template-rows: 1fr 1fr;
@@ -22,4 +26,198 @@
         grid-template-columns: 84px auto 20px;
         gap: 6px;
     }
+}
+
+@media screen and (min-width:437px) and (max-width:1135px) {
+    .home .get-started { 
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:600px) {
+    :root {
+        --home-padding: 56px 32px;
+        --inside-padding: 0 0 56px;
+        --h1-size: 44px;
+        --h1-margin-bottom: 56px;
+        --h2-size: 32px;
+    }
+    
+    h1, .login-left, .plan-left { max-width: 85%; }
+    
+    .ride-right .schedule {
+        height: 80px;
+        width: 93.3%;
+        
+        .oval-btn-big {
+            height: 48px;
+            padding: 14px 20px;
+        }
+    }
+    
+    .suggestion.vanish { display: grid; }
+    
+    .suggestions .suggestions-list { grid-template-columns: repeat(2, 1fr); }
+    
+    .pfl-left {
+        background-image: url(https://tb-static.uber.com/prod/udam-assets/5152cc71-a5b0-4fbd-aeb8-bee896efcd48.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .grid-1 {
+        max-width: 71%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1136px) {
+    :root {
+        --nav-padding: 12px 64px;
+        --home-padding: 64px;
+        --inside-padding: 0 0 64px;
+        --h1-size: 52px;
+        --h1-margin-bottom: 0px;
+        --h2-size: 36px;
+    }
+    
+    nav {
+        display: grid;
+        grid-template-columns: 57px 1fr 132px;
+        gap: 26px;
+    }
+    
+    .nav-center.vanish {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        .icon-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .center-left {
+            display: flex;
+            gap: 26px;
+        }
+        
+        .center-right {
+            display: flex;
+            gap: 26px;
+        }
+    }
+    
+    .nav-right button { display: none; }
+    
+    body .uber { font-size: 24px; }
+    
+    .ride {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+    
+    .ride-left { max-width: 76.2%; }
+    
+    .ride-left {
+        display: grid;
+
+        .vanish { display: block; }
+
+        h1 { max-width: 100%; }
+
+        .ride-content { max-width: 100%; }
+
+        div.location {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            img { height: 14px; }
+            
+            a { text-decoration: underline; }
+        }
+        
+        a.oval-btn-big {
+            height: 48px;
+            background-color: var(--light-grey-color);
+            font-size: 16px;
+            padding: 9px 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            img { height: 20px; }
+        }
+    }
+    
+    .ride-right .schedule {
+        top: 81%;
+        font-size: 16px;
+        
+        span, a { font-size: 16px; }
+        
+        .oval-btn-big { padding: 14px 12.5px; }
+    }
+    
+    .suggestions .suggestions-list { grid-template-columns: repeat(3, 1fr); }
+    
+    .log-in {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+    }
+
+    .login-left {
+        h2 { margin-bottom: 31px; }
+
+        p { margin-bottom: 31px; }
+    }
+
+    .login-left, .plan-left { max-width: 82.1%; }
+    
+    .pfl-content {
+        grid-template-columns: 1fr 360px;
+        gap: 24px;
+    }
+    
+    .pfl-left {
+        height: 400px;
+        
+        h3 { font-size: 36px; }
+    }
+    
+    .plan {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+    }
+    
+    .plan-2, .plan-4 {
+        justify-items: end;
+
+        h2 { margin-bottom: 31px; }
+
+        p { margin-bottom: 31px; }
+
+        .plan-right { order: -1; }
+    }
+    
+    .download-content { grid-template-columns: 1fr 1fr; }
+    
+    .grid-1 {
+        max-width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    div.grid-2, div.grid-3 { grid-template-columns: 1fr 1fr; }
+    
+    div.grid2-right, div.terms {
+        display: flex;
+        justify-content: end;
+    }
+    
 }

@@ -6,7 +6,11 @@
     --light-grey-color: #f0f0f0;
     --nav-padding: 12px 24px;
     --home-padding: 40px 24px;
-    --inside-padding: 0 0 50px;
+    --inside-padding: 0 0 40px;
+    --left-right-gap: 36px;
+    --h1-size: 36px;
+    --h1-margin-bottom: 40px;
+    --h2-size: 27px;
 }
 
 * {
@@ -34,6 +38,8 @@ body .uber {
     font-weight: 400;
 }
 
+.header-nav .vanish, .home .vanish { display: none; }
+
 .oval-btn {
     font-size: 14px;
     font-weight: 400;
@@ -51,17 +57,21 @@ body .uber {
     background-color: var(--white-color);
     color: var(--black-color);
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     
-    img { height: 16px; }
+    img { height: 14px; }
     
     .arrow { height: 8px; }
 }
 
 .btn {
+    height: fit-content;
     width: fit-content;
     color: white;
     background-color: black;
-    padding: 14px 23.5px;
+    padding: 14px 23px;
     border-radius: 6px;
     font-weight: 400;
     font-size: 1rem;
@@ -77,10 +87,19 @@ body .uber {
 
 .image { width: 100%; }
 
+
+h1 {
+    font-size: var(--h1-size);
+    font-weight: 600;
+    margin-bottom: var(--h1-margin-bottom);
+    letter-spacing: -2px;
+}
+
 h2 {
-    font-size: 27px;
+    font-size: var(--h2-size);
     font-weight: 600;
     margin-bottom: 25px;
+    letter-spacing: -1px;
 }
 
 .get-started {
@@ -106,8 +125,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     
-    .nav-center { display: none; }
-    
     .nav-right {
         display: flex;
         gap: 1rem;
@@ -132,11 +149,11 @@ nav {
     background-color: var(--white-color);
     border-radius: 50%;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
     z-index: 2;
     transform: rotate(-90deg);
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 5px black;
     
     img {
         height: 20px; 
@@ -153,25 +170,20 @@ nav {
 .ride {
     padding: var(--inside-padding);
     display: grid;
-    gap: 16px;
+    gap: var(--left-right-gap);
 }
 
 .ride-left {
-    .location { display: none; }
-    
-    h1 {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 40px;
-        letter-spacing: -2px;
-    }
-    
-    .oval-btn-big { display: none; }
-    
-    .content {
+    .ride-content {
+        max-width: 400px;
         display: flex;
         flex-direction: column;
         gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .get-started {
+        flex-direction: column;
         align-items: flex-start;
     }
 }
@@ -204,7 +216,7 @@ nav {
         left: 3rem;
     }
     
-    .pin {
+    .arrow {
         position: absolute;
         top: 15.5px;
         right: 15px;
@@ -233,7 +245,7 @@ nav {
     
     .schedule {
         height: 68px;
-        width: 87%;
+        width: 90.5%;
         background-color: #ffffff33;
         backdrop-filter: blur(32px);
         padding: 1rem 0.8rem;
@@ -253,24 +265,28 @@ nav {
     }
 }
 
+
+/* Suggestions Container */
 .suggestions {
     padding: var(--inside-padding);
     
     .suggestions-list {
         display: grid;
-        grid-template-rows: repeat(3, 170px);
+        /* grid-template-rows: repeat(3, 170px); */
         gap: 1rem;
     }
 }
 
 .suggestion {
+    height: 164px;
     padding: 1rem;
+    box-sizing: border-box;
     background-color: #f3f3f3;
     border-radius: 10px;
     display: grid;
     grid-template-columns: auto 128px;
     
-    .left {
+    .suggestion-left {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -282,7 +298,7 @@ nav {
     }
     
     p {
-        height: 62px;
+        height: 56px;
         font-size: 12px;
         font-weight: 300;
         line-height: 1.2rem;
@@ -290,89 +306,118 @@ nav {
     }
 }
 
+
+/* Log - In Container */
 .log-in {
     padding: var(--inside-padding);
     display: grid;
-    gap: 36px;
+    gap: var(--left-right-gap);
     
     p { margin-bottom: 25px; }
 }
 
+
+/* Plan For Later Container */
 .pfl {
     padding: var(--inside-padding);
     
-    .content {
+    .pfl-content {
         display: grid;
-        gap: 20px;
-    }
-    
-    .left {
-        /* height: 350px; */
-        padding: 24px;
-        box-sizing: border-box;
-        background-color: #9dcdd6;
-        border-radius: 12px;
-        
-        > * { margin-top: 25px; }
-        
-        h2 { margin-bottom: 25px; }
-        
-        p { font-size: 18px; }
-        
-        form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5px;
-        }
-        
-        .form-item {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        label {
-            font-size: 14px;
-            color: #5e5e5e;
-        }
-        
-        input {
-            padding: 0.8rem;
-            color: #5e5e5e;
-            border: none;
-            border-radius: 5px;
-        }
-         .btn { width: 100%; }
-    }
-    
-    .right {
-        padding: 0.8rem;
-        border: 1px solid #0000000a;
-        border-radius: 12px;
-        box-sizing: border-box;
-        display: grid;
-        gap: 1.3rem;
-        
-        p { font-weight: 300; }
-        
-        .benefit {
-            padding: 1rem;
-            display: flex;
-            gap: 20px;
-        }
-        
-        img { width: 20px; }
+        gap: var(--left-right-gap);
     }
 }
 
+.pfl-left {
+    height: 350px;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #9dcdd6;
+    border-radius: 12px;
+    
+    .pfl-left-content {
+        height: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-top: 25px;
+    }
+    
+    p { font-size: 18px; }
+    
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+    
+    .form-item {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        font-size: 14px;
+        color: #5e5e5e;
+    }
+    
+    input {
+        padding: 0.8rem;
+        color: #5e5e5e;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .btn { width: 100%; }
+}
+
+.pfl-right {
+    padding: 0.8rem;
+    border: 1px solid #0000000a;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 1.3rem;
+    
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    p { font-weight: 300; }
+    
+    .benefit {
+        padding: 1.4rem;
+        display: flex;
+        gap: 20px;
+    }
+    
+    img { width: 20px; }
+}
+
+
+/* Plan Containers - Styling */
 .plan {
     padding: var(--inside-padding);
     display: grid;
-    gap: 36px;
+    gap: var(--left-right-gap);
     
     p {
         font-weight: 300;
         margin-bottom: 25px;
     }
+}
+
+.plan-1 .oval-btn-big {
+    height: 48px;
+    width: 150px;
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 .plan-2 .get-started {
@@ -382,13 +427,15 @@ nav {
 
 .plan-4 { padding: 0; }
 
+
+/* Download Container */
 .download {
     padding: var(--home-padding);
     background-color: #f6f6f6;
     
-    .content {
+    .download-content {
         display: grid;
-        gap: 40px;
+        gap: var(--left-right-gap);
     }
     
     .box {
@@ -407,6 +454,8 @@ nav {
     }
 }
 
+
+/* Footer Container */
 footer {
     padding: var(--home-padding);
     background-color: var(--black-color);
@@ -429,17 +478,19 @@ footer {
     .flex {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 17px;
         
         p { font-size: 14px; }
     }
     
-    .left {
+    .grid2-left {
         display: flex;
         gap: 30px;
     }
+
+    .grid-2 img { width: 16px; }
     
-    .right {
+    .grid2-right {
         display: grid;
         gap: 20px;
         

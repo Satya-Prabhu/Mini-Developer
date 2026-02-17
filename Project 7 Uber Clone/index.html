@@ -18,7 +18,7 @@
                 <a class="uber" href="#">Uber</a>
             </div>
 
-            <div class="nav-center header-nav-center">
+            <div class="nav-center header-nav-center vanish">
                 <div class="center-left">
                     <a href="#">Ride</a>
                     <a href="#">Drive</a>
@@ -50,17 +50,16 @@
 
             <div class="ride-left">
 
-                <div class="location"><img src="./assets/icons/location-pin.svg" alt="location-pin"> Bangalore, IN <a
-                        href="#">Change City</a></div>
+                <div class="location vanish"><img src="./assets/icons/black-location-pin.svg" alt="black-location-pin"> Bangalore, IN <a href="#">Change City</a></div>
                 <h1>Go anywhere with Uber</h1>
-                <a class="oval-btn oval-btn-big" href="#"> <img src="./assets/icons/clock.svg" alt="Clock image"> Pickup
-                    now<img src="./assets/icons/arrowdown.svg" alt=""></a>
-                <div class="content">
+                <a class="oval-btn oval-btn-big vanish" href="#"> <img src="./assets/icons/clock.svg" alt="Clock image"> Pickup now<img src="./assets/icons/black-arrowdown.svg" alt="black-arrowdown"></a>
+
+                <div class="ride-content">
                     <div class="pickup">
                         <img src="./assets/icons/pickup-icon.svg" alt="pickup-icon">
                         <input type="text" name="pickup" id="pickup">
                         <label for="pickup">Pickup location</label>
-                        <img class="pin" src="./assets/icons/location-arrow.svg" alt="location-arrow">
+                        <img class="arrow" src="./assets/icons/location-arrow.svg" alt="location-arrow">
                     </div>
                     <div class="dropoff">
                         <img src="./assets/icons/dropoff-square.svg" alt="pickup-icon">
@@ -68,8 +67,10 @@
                         <label for="dropoff">Dropoff location</label>
                         <div class="line"></div>
                     </div>
-                    <button class="btn">See prices</button>
-                    <a class="btn-text" href="#">Log in to see your recent activity</a>
+                    <div class="get-started">
+                        <button class="btn">See prices</button>
+                        <a class="btn-text" href="#">Log in to see your recent activity</a>
+                    </div>
                 </div>
 
             </div>
@@ -96,39 +97,78 @@
             <div class="suggestions-list">
 
                 <div class="suggestion">
-                    <div class="left">
+                    <div class="suggestion-left">
                         <h3>Ride</h3>
                         <p>Go anywhere with Uber. Request a ride, hop in, and go.</p>
                         <a class="oval-btn" href="#">Details</a>
                     </div>
-                    <div class="right">
+                    <div class="suggestion-right">
                         <img class="image" src="https://mobile-content.uber.com/launch-experience/top_bar_rides_3d.png"
                             alt="car image">
                     </div>
                 </div>
 
                 <div class="suggestion">
-                    <div class="left">
+                    <div class="suggestion-left">
                         <h3>Reserve</h3>
                         <p>Reserve your ride in advance so you can relax on the day of your trip.</p>
                         <a class="oval-btn" href="#">Details</a>
                     </div>
 
-                    <div class="right">
+                    <div class="suggestion-right">
                         <img class="image" src="https://mobile-content.uber.com/uber_reserve/reserve_clock.png"
                             alt="calendar image">
                     </div>
                 </div>
 
                 <div class="suggestion">
-                    <div class="left">
+                    <div class="suggestion-left">
                         <h3>Intercity</h3>
                         <p>Get convenient, affordable outstation cabs anytime at your door.</p>
                         <a class="oval-btn" href="#">Details</a>
                     </div>
 
-                    <div class="right">
+                    <div class="suggestion-right">
                         <img class="image" src="https://mobile-content.uber.com/launch-experience/intercity.png"
+                            alt="Intercity image">
+                    </div>
+                </div>
+                
+                <div class="suggestion vanish">
+                    <div class="suggestion-left">
+                        <h3>Shuttle</h3>
+                        <p>Lower-cost shared rides on professionally driven buses and vans.</p>
+                        <a class="oval-btn" href="#">Details</a>
+                    </div>
+                    
+                    <div class="suggestion-right">
+                        <img class="image" src="https://mobile-content.uber.com/launch-experience/hcv_shuttle.png"
+                        alt="Intercity image">
+                    </div>
+                </div>
+                
+                <div class="suggestion vanish">
+                    <div class="suggestion-left">
+                        <h3>Courier</h3>
+                        <p>Uber makes same-day item delivery easier than ever.</p>
+                        <a class="oval-btn" href="#">Details</a>
+                    </div>
+
+                    <div class="suggestion-right">
+                        <img class="image" src="https://cn-geo1.uber.com/static/mobile-content/Courier.png"
+                            alt="Intercity image">
+                    </div>
+                </div>
+                
+                <div class="suggestion vanish">
+                    <div class="suggestion-left">
+                        <h3>Rentals</h3>
+                        <p>Request a trip for a block of time and make multiple stops.</p>
+                        <a class="oval-btn" href="#">Details</a>
+                    </div>
+
+                    <div class="suggestion-right">
+                        <img class="image" src="https://mobile-content.uber.com/launch-experience/Hourly2021.png"
                             alt="Intercity image">
                     </div>
                 </div>
@@ -139,7 +179,7 @@
 
         <div class="log-in">
 
-            <div class="left">
+            <div class="login-left">
                 <h2>Log in to see your account details</h2>
                 <p>View past trips, tailored suggestions, support resources, and more.</p>
                 <div class="get-started">
@@ -148,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="right">
+            <div class="login-right">
                 <img class="image"
                     src="https://tb-static.uber.com/prod/udam-assets/850e6b6d-a29e-4960-bcab-46de99547d24.svg"
                     alt="two people sitting in a car image">
@@ -159,25 +199,27 @@
         <div class="pfl">
 
             <h2>Plan for later</h2>
-            <div class="content">
+            <div class="pfl-content">
 
-                <div class="left">
-                    <h2>Get your ride right with Uber Reserve</h2>
-                    <p>Choose date and time</p>
-                    <form action="#">
-                        <div class="form-item date">
-                            <label for="date">Date</label>
-                            <input type="date" name="date" id="date">
-                        </div>
-                        <div class="form-item time">
-                            <label for="time">Time</label>
-                            <input type="time" name="time" id="time">
-                        </div>
-                    </form>
-                    <button class="btn">Next</button>
+                <div class="pfl-left">
+                   <div class="pfl-left-content">
+                        <h3>Get your ride right with Uber Reserve</h3>
+                        <p>Choose date and time</p>
+                        <form action="#">
+                            <div class="form-item date">
+                                <label for="date">Date</label>
+                                <input type="date" name="date" id="date">
+                            </div>
+                            <div class="form-item time">
+                                <label for="time">Time</label>
+                                <input type="time" name="time" id="time">
+                            </div>
+                        </form>
+                        <button class="btn">Next</button>
+                    </div>
                 </div>
 
-                <div class="right">
+                <div class="pfl-right">
                     <h3>Benefits</h3>
                     <div class="benefits-list">
                         <div class="benefit">
@@ -205,7 +247,7 @@
 
         <div class="plan plan-1">
 
-            <div class="left">
+            <div class="plan-left">
                 <h2>Planning your next getaway?</h2>
                 <p>From weekend road trip to international destination, we've got you covered. Explore transport
                     options, points of interest, and more with our new City Hub.</p>
@@ -213,7 +255,7 @@
                         alt="location-pin"> Bangalore <img class="arrow" src="./assets/icons/light-arrowdown.svg"
                         alt="light-arrowdown"></a>
             </div>
-            <div class="right">
+            <div class="plan-right">
                 <img class="image"
                     src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=754/height=502/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9mNjE2MmMyZC1mZGZhLTRjOGMtYTg4Yy1hOGU2N2U3NjQyMTcucG5n"
                     alt="next getaway image">
@@ -223,7 +265,7 @@
 
         <div class="plan plan-2">
 
-            <div class="left">
+            <div class="plan-left">
                 <h2>Drive when you want, make what you need</h2>
                 <p>Make money on your schedule with deliveries or rides—or both. You can use your own car or choose a
                     rental through Uber.</p>
@@ -232,7 +274,7 @@
                     <a class="btn-text" href="#">Already have an account? Sign in</a>
                 </div>
             </div>
-            <div class="right">
+            <div class="plan-right">
                 <img class="image"
                     src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy85NjRkZDNkMS05NGU3LTQ4MWUtYjI4Yy0wOGQ1OTM1M2I5ZTAucG5n"
                     alt="next getaway image">
@@ -242,7 +284,7 @@
 
         <div class="plan plan-3">
 
-            <div class="left">
+            <div class="plan-left">
                 <h2>The Uber you know, reimagined for business</h2>
                 <p>Uber for Business is a platform for managing global rides and meals, and local deliveries, for
                     companies of any size.</p>
@@ -251,7 +293,7 @@
                     <a class="btn-text" href="#">Check out our solutions</a>
                 </div>
             </div>
-            <div class="right">
+            <div class="plan-right">
                 <img class="image"
                     src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy83NmJhZjFlYS0zODVhLTQwOGMtODQ2Yi01OTIxMTA4NjE5NmMucG5n"
                     alt="next getaway image">
@@ -261,14 +303,14 @@
 
         <div class="plan plan-4">
 
-            <div class="left">
+            <div class="plan-left">
                 <h2>Make money by renting out your car</h2>
                 <p>Connect with thousands of drivers and earn more per week with Uber’s free fleet management tools.</p>
                 <div class="login-create">
                     <button class="btn">Get started</button>
                 </div>
             </div>
-            <div class="right">
+            <div class="plan-right">
                 <img class="image"
                     src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8xODM0ZTZmZC0zM2UzLTRjOTUtYWQ3YS1mNDg0YThjODEyZDcuanBn"
                     alt="next getaway image">
@@ -280,7 +322,7 @@
     
     <div class="download">
         <h2>It’s easier in the apps</h2>
-        <div class="content">
+        <div class="download-content">
             <div class="box box-1">
                 <img class="image" src="https://tb-static.uber.com/prod/udam-assets/e24f1914-1e23-4896-ad77-22e88c37c2f9.svg"
                     alt="Uber app">
@@ -339,15 +381,15 @@
 
         </div>
         <div class="grid-2">
-            <div class="left">
+            <div class="grid2-left">
                 <img src="./assets/icons/linkedin.svg" alt="linkedin">
                 <img src="./assets/icons/youtube.svg" alt="youtube">
                 <img src="./assets/icons/instagram.svg" alt="instagram">
                 <img src="./assets/icons/x.svg" alt="x">
             </div>
-            <div class="right">
+            <div class="grid2-right">
                 <a href="#"><img src="./assets/icons/language-globe.svg" alt="globe"> English</a>
-                <a href="#"><img src="./assets/icons/location-pin.svg" alt="globe"> Bangalore</a>
+                <a href="#"><img src="./assets/icons/location-pin.svg" alt="white-location-pin"> Bangalore</a>
             </div>
         </div>
         <div class="install">
