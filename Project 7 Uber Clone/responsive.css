@@ -89,6 +89,8 @@
         gap: 26px;
     }
     
+    body .uber { padding-bottom: 5px; }
+    
     .nav-center.vanish {
         width: 100%;
         display: flex;
@@ -123,14 +125,16 @@
     .ride-left { max-width: 76.2%; }
     
     .ride-left {
-        display: grid;
-
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        
         .vanish { display: block; }
-
+        
         h1 { max-width: 100%; }
-
+        
         .ride-content { max-width: 100%; }
-
+        
         div.location {
             display: flex;
             align-items: center;
@@ -170,13 +174,13 @@
         gap: 36px;
         align-items: center;
     }
-
+    
     .login-left {
         h2 { margin-bottom: 31px; }
-
+        
         p { margin-bottom: 31px; }
     }
-
+    
     .login-left, .plan-left { max-width: 82.1%; }
     
     .pfl-content {
@@ -198,11 +202,11 @@
     
     .plan-2, .plan-4 {
         justify-items: end;
-
+        
         h2 { margin-bottom: 31px; }
-
+        
         p { margin-bottom: 31px; }
-
+        
         .plan-right { order: -1; }
     }
     
@@ -220,4 +224,51 @@
         justify-content: end;
     }
     
+    .download {
+        .vanish-later { display: none; }
+        
+        .vanish { display: inline-block; }
+        
+        .box {
+            padding: 24px;
+            grid-template-columns: 150px auto 15px;
+        }
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .home, .download, footer {
+        width: 1280px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .ride-left {
+        max-width: 444px;
+        
+        .ride-content { max-width: 400px; }
+        
+        .get-started {
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+        }
+    }
+    
+    .ride-right .schedule { top: 83%; }
+    
+    .container-2 { background-color: #f6f6f6; }
+    
+    .container-3 { background-color: var(--black-color); }
+}
+
+@media screen and (min-width:1408px) {
+    header {
+        background-color: var(--black-color);
+    }
+    
+    .container-1 {
+        width: 1408px;
+        margin: 0 auto;
+    }
 }
