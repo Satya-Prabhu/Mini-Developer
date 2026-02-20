@@ -14,7 +14,9 @@
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 20px;
     background-color: var(--Grey900);
     color: var(--white);
     font-family: "Inter", sans-serif;
@@ -81,9 +83,9 @@
     color: var(--Grey800);
 }
 
-.attribution {
-    margin-top: 10px;
-    font-size: 12px;
+.coder {
+    padding: 20px 0;
+    font-size: 20px;
     text-align: center;
     font-weight: 700;
 }
