@@ -97,7 +97,7 @@ body {
 }
 
 .dropdown {
-    background: url(./Assets/icons/language-icon.svg) no-repeat 10px center;
+    background: url(./assets/icons/language-icon.svg) no-repeat 10px center;
     font-size: 0.9rem;
     padding: 6px 16px 6px 30px;
     font-weight: 600;
