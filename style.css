@@ -138,7 +138,7 @@
   }
 }
 
-/* Github code & Live preview */
+/* Github & Live - Buttons */
 .project-link {
   display: flex;
   gap: 0.5rem;
@@ -173,5 +173,4 @@
   span:nth-child(2) i {
     -webkit-text-stroke: 0.2px;
   }
-
 }
