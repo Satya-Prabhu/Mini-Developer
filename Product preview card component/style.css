@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: var(--Cream);
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    background-color: var(--White);
+}
+
+.left img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.right {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right .title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--Grey);
+}
+
+.right .heading {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+    color: var(--Black);
+}
+
+.right .brief {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Grey);
+}
+
+.right .price {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    
+    .discount-price {
+        color: var(--Green-500);
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        font-size: 32px;
+    }
+    
+    .mrp-price {
+        color: var(--Grey);
+        font-size: 13px;
+        font-weight: 400;
+        text-decoration: line-through;
+    }
+}
+
+.right button {
+    width: 100%;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    background-color: var(--Green-500);
+    color: var(--White);
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: var(--Green-700);
+    cursor: pointer;
+}
+
+.attribution {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        height: 100%;
+        padding: 30px 0;
+    }
+    
+    .card {
+        width: 93vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 93vw 430px;
+    }
+    
+    .left img {
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+}
