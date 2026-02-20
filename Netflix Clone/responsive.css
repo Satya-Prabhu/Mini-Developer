@@ -1,0 +1,135 @@
+@media only screen and (max-width:959px) {
+    :root {
+        --home-height: 664px;
+        --center-2-width: 100%;
+        --h1-size: 2rem;
+        --btn-big-size: 18px;
+        --side-head-size: 18px;
+        --side-head-margin-bottom: 1rem;
+        --trending-width: 112px;
+    }
+
+    .home-nav {
+        height: 80px;
+        
+        .nav-left .logo { height: 24px; }
+    }
+    
+    .reasons-list {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .reason {
+        box-sizing: border-box;
+        
+        img { width: 4rem; }
+    }
+
+    .faq {
+        font-size: 18px;
+        
+        img { width: 24px; }
+    }
+
+    .two > ul { row-gap: 12px; }
+}
+
+@media only screen and (max-width:599px) {
+    :root {
+        --default-padding: 1.5rem;
+        --center-width: 100%;
+        --btn-big-width: 160px;
+        --center-gap: 0.5rem;
+    }
+    
+    .center-1 { padding: 0 8px; }
+    
+    .subscribe-box {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+        
+        #email {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 24px 16px 0.5rem;
+        }
+    }
+    
+    .btn-big { height: 3rem; } 
+    
+    .reason { height: 217px; }
+    
+    .two > ul { grid-template-columns: 1fr; }
+
+    .attribution { font-size: 1rem; }
+}
+
+
+@media only screen and (min-width:600px) and (max-width:959px) {
+    :root {
+        --default-padding: 2rem;
+        --h2-padding-bottom: 0;
+        --center-width: 27rem;
+    }         
+    
+    .reason { height: 177px; }  
+    
+    .two > ul { grid-template: repeat(8,1fr) / repeat(2,1fr); }    
+}    
+
+@media only screen and (max-width:1279px) {
+    :root {
+        --curve-height: 100px;
+        --reason-head-size: 20px;
+        --btn-big-width: 180px;
+        --h1-weight: 700;
+        --h2-size: 1rem;
+        --h2-weight: 400;
+    }
+}
+
+@media only screen and (min-width:960px) and (max-width:1279px) {
+    :root {
+        --default-padding: 5rem;
+        --home-height: 768px;
+        --h1-size: 2.5rem;
+        --center-width: 31.75rem;
+        --center-2-width: 40rem;
+        --trending-width: 140px;
+        --btn-big-size: 1.2rem;
+    }    
+    
+    .reasons-list { grid-template-columns: repeat(2, 1fr); }
+    
+    .reason {
+        height: 200px; 
+        box-sizing: border-box;
+    }    
+    
+    .two > ul { grid-template: repeat(5,1fr) / repeat(3,1fr); }
+}    
+
+@media only screen and (min-width:1920px) {
+    :root {
+        --home-height: 1000px;
+        --home-width: 120rem;
+        --default-padding: 22rem;
+        --h1-size: 4rem;
+        --side-head-size: 2rem;
+        --center-width: 41.5rem;
+        --center-gap: 1.5rem;
+        --center-2-width: 49rem;
+        --trending-width: 210px;
+    }
+    
+    body {
+        width: var(--home-width);
+        margin: 0 auto;
+    }
+    
+    .background { box-shadow: 0 -200px 200px 30px #ff0000; }
+    
+    .center { height: 105%; }
+}
