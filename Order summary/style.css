@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+    --Blue-50: hsl(225, 100%, 98%);
+    --Blue-100: hsl(225, 100%, 94%);
+    --Gray-600: hsl(224, 23%, 55%);
+    --Blue-700: hsl(245, 75%, 52%);
+    --Blue-950: hsl(223, 47%, 23%);
+}
+
+body {
+    height: 100vh;
+    max-height: 100%;
+    background: url("./assets/images/pattern-background-desktop.svg");
+    background-color: var(--Blue-100);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Card , img & order section's */
+.card {
+    width: 450px;
+    border-radius: 15px;
+    background-color: white;
+    display: grid;
+}
+
+.card {
+    .main-img {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .order {
+        padding: 3rem;
+        display: grid;
+        justify-items: center;
+        gap: 30px;
+    }
+}
+
+
+/* Order Section */
+.order {
+    * {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--Gray-600)
+    }
+    
+    h1.title {
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--Blue-950);
+    }
+    
+    p.brief { text-align: center; }
+    
+    .plan { 
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-color: var(--Blue-50);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .pay-btn {
+        width: 100%;
+        padding: 14px;
+        font-weight: 900;
+        color: white;
+        background-color: var(--Blue-700);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px 0px hsl(223, 47%, 23%, 0.5);
+    }
+    
+    .cancel {
+        font-weight: 900;
+        text-decoration: none;
+    }
+}
+
+
+/* Plan section */
+.plan {
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .price h2 {
+        font-weight: 900;
+        color: var(--Blue-950);
+    }
+    
+    .right a { color: var(--Blue-700); }
+}
+
+body .coder * {
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* mouse Events */
+.plan .right a:hover { color: hsl(245, 75%, 52%, 0.8); }
+
+.order .pay-btn:hover {
+    cursor: pointer;
+    background-color: hsl(245, 75%, 52%, 0.8);
+}
+
+.order .cancel:hover { color: var(--Blue-950); }
+
+
+/* Responsive styling */
+@media screen and (max-width:450px) {
+    body {
+        background: url("./assets/images/pattern-background-mobile.svg");
+        background-color: var(--Blue-100);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .card {
+        width: 350px;
+        
+        .main-img { width: 350px; }
+        
+        .order {
+            padding: 1.5rem;
+            gap: 30px;
+        }
+    }
+    
+    .order {
+        h1.title { font-size: 25px; }
+        
+        p.brief { padding: 0 10px; }
+        
+        .plan { padding: 1rem; }
+    }
+}
