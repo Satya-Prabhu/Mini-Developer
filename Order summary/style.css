@@ -33,6 +33,7 @@ body {
     border-radius: 15px;
     background-color: white;
     display: grid;
+    transition: all 500ms ease;
 }
 
 .card {
