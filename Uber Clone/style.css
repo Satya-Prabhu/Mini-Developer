@@ -26,6 +26,8 @@ body {
 
 
 /* Default Element Styles */
+header, .home, .container-2, .container-3 { transition: all 500ms ease-in-out; }
+
 button, a {
     background-color: transparent;
     border: none;
@@ -116,6 +118,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: all 500ms ease;
 }
 
 nav {
@@ -524,7 +527,7 @@ footer {
     }
     
     /* Author */
-    .attribution {
+    .coder {
         margin-top: 10px;
         font-size: 2rem;
         text-align: center;
