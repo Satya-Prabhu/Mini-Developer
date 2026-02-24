@@ -24,6 +24,7 @@
     align-items: center;
     padding: 120px;
     background-color: var(--Rose-50);
+    transition: all 500ms ease;
 }
 
 .card {
