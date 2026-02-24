@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: var(--Font-size);
+    color: var(--Blue-500);
+}
+
+:root {
+    --Blue-500: hsl(215, 51%, 70%);
+    --Cyan-400: hsl(178, 100%, 50%);
+    --Blue-950: hsl(217, 54%, 11%);
+    --Blue-900: hsl(216, 50%, 16%);
+    --Blue-800: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size: 18px;
+    --default-spacing: 20px;
+}
+
+body {
+    height: 100vh;
+    max-height: 100%;
+    background: var(--Blue-950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Card styling */
+.card {
+    background: var(--Blue-900);
+    width: 290px;
+    padding: 1.5rem;
+    display: grid;
+    gap: var(--default-spacing);
+    border-radius: 15px;
+    box-shadow: 0px 30px 0px 15px hsla(0, 0%, 0%, 0.08), 0px 30px 0px 50px hsl(216, 50%, 16%, 0.08);
+}
+
+
+/* NFT card inside elements */
+.card {
+    
+    .nft-image { position: relative; }
+    
+    .nft {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .cyan-eye { display: none; }
+    
+    h1.title {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .text { font-weight: 300; }
+}
+
+
+/* NFT Details part */
+.details {
+    display: flex;
+    justify-content: space-between;
+    
+    * {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    
+    .price { color: var(--Cyan-400); }
+}
+
+
+/* Creator part */
+.creator {
+    padding-top: var(--default-spacing);
+    border-top: 1px solid var(--Blue-800);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    .avatar {
+        width: 30px;
+        border: 1px solid var(--White);
+        border-radius: 50%;
+    }
+    
+    span { color: var(--White); }
+}
+
+
+/* Mouse Events */
+.nft-image:hover {
+    .cyan-eye {
+        height: 290px;
+        width: 100%;
+        background-color: hsl(178, 100%, 50%, 0.5);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        cursor: pointer;
+    }
+}
+
+h1.title:hover {
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
+
+.creator span:hover {
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
