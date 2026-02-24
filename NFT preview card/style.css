@@ -24,6 +24,7 @@ body {
     max-height: 100%;
     background: var(--Blue-950);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -50,7 +51,7 @@ body {
         width: 100%;
         border-radius: 10px;
     }
-
+    
     .cyan-eye { display: none; }
     
     h1.title {
@@ -58,7 +59,7 @@ body {
         font-weight: 600;
         color: white;
     }
-
+    
     .text { font-weight: 300; }
 }
 
@@ -93,6 +94,13 @@ body {
     }
     
     span { color: var(--White); }
+}
+
+body .coder * {
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
 }
 
 
