@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+:root {
+    --Teal-500: hsl(179, 62%, 43%);
+    --Green-400: hsl(71, 73%, 54%);
+    --Teal-100: hsl(204, 43%, 93%);
+    --Gray-500: hsl(218, 22%, 67%);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--Teal-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container & Card deafult styles */
+.container { width: 90%; }
+
+.card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Community - 1st Card */
+.community {
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    
+    .title {
+        font-size: 21px;
+        color: var(--Teal-500);
+        font-weight: 700;
+    }
+    
+    .guarantee {
+        font-size: 16px;
+        color: var(--Green-400);
+        font-weight: 700;
+    }
+    
+    .brief {
+        color: var(--Gray-500);
+        line-height: 1.7;
+    }
+}
+
+
+/* Subscription - 2nd Card */
+.subscription {
+    background-color: var(--Teal-500);
+    
+    .price {
+        font-size: 30px;
+        color: white;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    span {
+        color: var(--Teal-100);
+        opacity: 60%;
+    }
+    
+    .brief {
+        font-size: 16px;
+        color: var(--Teal-100);
+        opacity: 80%;
+    }
+    
+    .btn {
+        padding: 1rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        color: var(--Teal-100);
+        background-color: var(--Green-400);
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}
+
+
+/* Why Us - 3rd Card */
+.why-us {
+    background-color: hsl(179, 47%, 52%);
+    border-radius: 0 0 5px 5px;
+    
+    li {
+        color: var(--Teal-100);
+        opacity: 70%;
+        list-style: none;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* Default Elements */
+h2.title {
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--Teal-100);
+}
+
+.coder, .coder * {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Responsive Styles */
+@media screen and (min-width:425px) {
+    .container { width: 70%; }
+}
+
+@media screen and (min-width:660px) {
+    .container {
+        width: 660px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    
+    .card {
+        padding: 3rem;
+    }
+    
+    .community {
+        grid-area: 1 / 1 / 2 / 3;
+        
+        .title { font-size: 24px; }
+        
+        .guarantee { font-size: 18px; }
+        
+        .brief { font-size: 16px; }
+    }
+    
+    .subscription {
+        grid-area: 2 / 1 / 3 / 2;
+        border-radius: 0 0 0 5px;
+    }
+    
+    .why-us {
+        grid-area: 2 / 2 / 3 / 3;
+        border-radius: 0 0 5px 0;
+    }
+    
+    h2.title { font-size: 19px; }
+}
+
