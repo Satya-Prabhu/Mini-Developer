@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap');
+
+:root {
+    --Navy-950: hsl(229, 23%, 23%);
+    --Blue-600: hsl(185, 75%, 39%);
+    --Gray-500: hsl(227, 10%, 46%);
+    --Gray-100: hsl(225, 10%, 92%);
+    --bg-size: 60vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    background:
+                url("./assets/images/bg-pattern-top.svg") no-repeat,
+                url("./assets/images/bg-pattern-bottom.svg") no-repeat,
+                var(--Blue-600);
+    background-position:
+                        calc(50% - var(--bg-size) / 2) calc(0% - var(--bg-size) / 2),
+                        calc(50% + var(--bg-size) / 2) calc(100% + var(--bg-size) / 2);
+    background-size: 
+                    var(--bg-size) var(--bg-size),
+                    var(--bg-size) var(--bg-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Card - Container */
+.card {
+    height: 400px;
+    width: 330px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px -10px var(--Gray-500);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 500ms ease;
+    
+    .center {
+        position: relative;
+        padding: 4.55rem 0 2rem;
+    }
+    
+    .down {
+        padding: 2rem 3rem;
+        border-top: 1px solid var(--Gray-100);
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* Individual Elements */
+.card-bg {
+    display: block;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.profile {
+    position: absolute;
+    top: -52px;
+    translate: -50%;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+h1, h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--Navy-950);
+}
+p, span {
+    margin-top: 7px;
+    font-weight: 400;
+    color: var(--Gray-500);
+}
+
+.down p { font-size: 14px; }
+
+.coder, .coder * {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Reponsive Design - Media Queries */
+@media screen and (max-width:330px) {
+    .card { width: 90%; }
+    
+    .card .center { padding: 5rem 0 2.2rem; }
+    
+    .card .down { padding: 2.2rem 3rem; }
+}
+
+@media screen and (max-width:600px) {
+:root { --bg-size:130vw }
+
+    body {
+        background-position:
+                            calc(0% - var(--bg-size) / 2) calc(0% - var(--bg-size) / 2),
+                            calc(100% + var(--bg-size) / 2) calc(100% + var(--bg-size) / 2);
+    }
+}
