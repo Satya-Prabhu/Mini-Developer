@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Blue-200: hsl(243, 100%, 93%);
+    --Blue-850: hsl(228, 56%, 26%);
+    --Blue-950: hsl(229, 57%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("./assets/images/bg-mobile.png") no-repeat;
+    background-size: cover;
+}
+
+
+/* Parent Container - Outside box area */
+.container {
+    height: 420px;
+    width: 87%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 500ms ease;
+}
+
+/* First Container - Logo & Uploads */
+.first {
+    height: 204px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    background-color: var(--Blue-850);
+    padding: 3rem 7.5rem 2.5rem 3rem;
+    border-radius: 10px 100px 10px 10px;
+    box-sizing: border-box;
+    
+    .logo { width: 138px; }
+    
+    .selection {
+        display: flex;
+        gap: 17px;
+        box-sizing: border-box;
+    }
+    
+    .select {
+        background: var(--Blue-950);
+        border-radius: 10px;
+        height: 47px;
+        width: 47px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Second Cointainer - Storage Details */
+.second {
+    height: 158px;
+    padding: 2.3rem 2.5rem 3.9rem;
+    background-color: var(--Blue-850);
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    
+    .brief {
+        color: var(--Grayish-Blue);
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    span {
+        color: var(--Blue-200);
+        font-weight: 700;
+    }
+    
+    .slider-out {
+        width: 100%;
+        height: 20px;
+        background-color: var(--Blue-950);
+        border-radius: 20px;
+    }
+    
+    .slider-in {
+        width: 75%;
+        height: 14px;
+        margin: 3px;
+        background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+        border-radius: 20px;
+        display: flex;
+        justify-content: end;
+    }
+    
+    .slider-circle {
+        height: 11px;
+        width: 11px;
+        margin: 1.5px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    
+    .storage {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        span { font-size: 12px; }
+    }
+    
+    .storage-left {
+        height: 73px;
+        box-sizing: border-box;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 12px 1.6rem;
+        color: var(--Grayish-Blue);
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        bottom: -38px;
+    }
+    
+    .stl {
+        font-size: 3rem;
+        color: var(--Blue-950);
+    }
+}
+
+
+/* Individual Elements */
+.coder {
+    color: white;
+    padding: 20px 0 2rem;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* Responsive Design - Media Queries */
+@media screen and (min-width:940px) {
+    .container {
+        max-width: 920px;
+        height: auto;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template: 1fr / 350px auto;
+        align-items: end;
+        gap: 30px;
+    }
+    
+    .second {
+        height: 156px;
+        text-align: left;
+        padding: 3.1rem 3rem;
+        align-items: start;
+        
+        .storage-left {
+            bottom: 0;
+            top: -47px;
+            right: 2.9rem;
+            z-index: 50;
+        }
+    }
+    
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 32px solid transparent;
+        border-right: 32px solid transparent;
+        border-bottom: 32px solid white;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 1.475rem;
+        z-index: 100;
+    }
+}
