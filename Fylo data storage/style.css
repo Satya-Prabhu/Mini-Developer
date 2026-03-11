@@ -163,6 +163,9 @@ body {
 
 /* Responsive Design - Media Queries */
 @media screen and (min-width:940px) {
+    body {
+        background: url("./assets/images/bg-desktop.png") no-repeat bottom, var(--Blue-950);
+    }
     .container {
         max-width: 920px;
         height: auto;
